@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let store of stores"
+      [class.selected]="store === selectedStore"
+      (click)="onSelect(store)">{{ store.name }}
+  </li>
+</ul>
+<app-store-detail [store] = "selectedStore"></app-store-detail>
